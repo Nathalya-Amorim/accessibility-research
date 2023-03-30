@@ -1,3 +1,4 @@
+{{!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,23 +6,100 @@
   <title>
     {{title}}
   </title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/main.css' />
 </head>
 
 <body>
-  <h1>{{title}}</h1>
+  <h1>{{title}}</h1> --}}
   <section aria-label="Video player">
-    <h1>Video</h1>
-    <video id="video" class="video" controls height="640" src="/assets/VincentMalloy.mp4">
+    <h2 class="div1">Dr. Binocs</h2>
+    <div class="parent">
 
-      <track label="English" kind="captions" srclang="en" src="/assets/Vincent.eng.vtt" default>
-    </video>
+      {{!-- <video id="video" class="video" controls height="640" src="">
+        <track label="English" kind="captions" srclang="en" src="/assets/Vincent.eng.vtt" default>
+      </video> --}}
+      <div class="video-container div2">
+        <video control id="binocs-video">
+          <source src="/assets/binocs_volcano.mp4" type="video/mp4">
+          <p>Your browser does not support the video tag.</p>
+          <track src="/assets/binocs_volcano.vtt" kind="captions" srclang="en" label="English captions" default>
+
+        </video>
+
+        <div class="control-bar">
+          <button id="rewindButton" class="btn btn-secondary" aria-label="Video Backward"><i
+              class="fa-solid fa-backward"></i></button>
+          <button id="playButton" class="btn btn-primary" aria-label="Video Play"><i
+              class="fa-solid fa-play"></i></button>
+          <button id="pauseButton" class="btn btn-primary" aria-label="Video Pause"><i
+              class="fa-solid fa-pause"></i></button>
+          <button id="fastForwardButton" class="btn btn-secondary" aria-label="Video Forward"><i
+              class="fa-solid fa-forward"></i></button>
+          <input type="range" id="volumeSlider" class="form-range" min="0" max="1" step="0.1" value="1"
+            aria-label="Video Volume">
+          <button id="fullscreenButton" class="btn btn-secondary" aria-label="Video Fullscreen"><i
+              class="fa-solid fa-expand"></i></button>
+        </div>
+      </div>
+      <div class="transcript-container div3">
+        <h2>Audio Transcript</h2>
+        <ul class="transcript-list">
+          <li><span class="timestamp">0:09</span>Oh, hello friends!</li>
+          <li><span class="timestamp">0:17</span>Are you wondering what this is?</li>
+          <li><span class="timestamp">0:19</span>Well, it's the molten lava that comes out from a volcano</li>
+          <li><span class="timestamp">0:26</span>Come, let me tell you what a volcano is.</li>
+          <li><span class="timestamp">0:29</span>Zoooom in!</li>
+          <li><span class="timestamp">0:31</span>I am sure you've seen mountains that open up</li>
+          <li><span class="timestamp">0:34</span>and blurt out thick molten semi-solid like substance?</li>
+          <li><span class="timestamp">0:40</span>Well, that's called a volcano!</li>
+          <li><span class="timestamp">0:43</span>Let’s learn more about it.</li>
+          <li><span class="timestamp">0:46</span>A volcano is a vent or 'chimney'</li>
+          <li><span class="timestamp">0:49</span>that connects Magma from within the Earth’s crust</li>
+          <li><span class="timestamp">0:52</span>to the Earth's surface.</li>
+          <li><span class="timestamp">0:55</span>The liquid rock is called Magma</li>
+          <li><span class="timestamp">0:57</span>when it is under the earth's surface</li>
+          <li><span class="timestamp">1:00</span>and Lava after it comes out.</li>
+          <li><span class="timestamp">1:06</span>So how does a volcano erupt?</li>
+          <li><span class="timestamp">1:10</span>The molten rock stored in the magma chamber</li>
+          <li><span class="timestamp">1:13</span>rises through the crater pipe pockets.</li>
+          <li><span class="timestamp">1:16</span>As it travels up the main vent,</li>
+          <li><span class="timestamp">1:18</span>gases expand and water becomes steam, creating pressure.</li>
+          <li><span class="timestamp">1:24</span>When the pressure can no longer be contained</li>
+          <li><span class="timestamp">1:26</span>the volcano erupts through the crater</li>
+          <li><span class="timestamp">1:29</span>and secondary side vents.</li>
+          <li><span class="timestamp">1:32</span>Common volcanic gases include</li>
+          <li><span class="timestamp">1:35</span>water vapour, carbon dioxide, sulfur dioxide,</li>
+          <li><span class="timestamp">1:38</span>hydrogen chloride, hydrogen fluoride</li>
+          <li><span class="timestamp">1:42</span>and hydrogen sulfide.</li>
+          <li><span class="timestamp">1:45</span>Popular belief is that</li>
+          <li><span class="timestamp">1:47</span>Volcanoes are large cone-shaped mountains but that's not true.</li>
+          <li><span class="timestamp">1:52</span>There are many more types of volcanoes, such as -</li>
+          <li><span class="timestamp">1:55</span>wide plateaus,</li>
+          <li><span class="timestamp">1:57</span>fissure vents</li>
+          <li><span class="timestamp">1:58</span>and bulging dome shapes.</li>
+          <li><span class="timestamp">2:01</span>There are also volcanoes found on the ocean floor</li>
+          <li><span class="timestamp">2:05</span>and even under icecaps</li>
+          <li><span class="timestamp">2:08</span>such as those found in Iceland.</li>
+          <li><span class="timestamp">2:13</span>The word volcano</li>
+          <li><span class="timestamp">2:14</span>originally comes from the name of the Roman god of fire</li>
+          <li><span class="timestamp">2:18</span>Vulcan</li>
+          <li><span class="timestamp">2:21</span>The tallest volcano in the Solar System isn’t on Earth at all</li>
+          <li><span class="timestamp">2:26</span>but on Mars.</li>
+          <li><span class="timestamp">2:29</span>So tune in next time</li>
+          <li><span class="timestamp">2:31</span>for some more fun filled facts.</li>
+          <li><span class="timestamp">2:34</span>This is me Zooomin’ out</li>
+        </ul>
+      </div>
+    </div>
   </section>
+  {{!--
 
-  <section aria-l4abel="Audio player">
-
-  </section>
-
+  <script src="/js/video-controller.js"></script>
+  <script src="https://kit.fontawesome.com/5cf9241734.js" crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html> --}}
