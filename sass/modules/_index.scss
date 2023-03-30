@@ -4,13 +4,7 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2334116c' fill-opacity='0.09'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-h2 {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 2.5em;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    color: #340458;
-}
+
 
 /* #340458 #fed636 #14cac9*/
 
@@ -24,11 +18,68 @@ h2 {
     background-color: #340458;
 }
 
-.video-container video {}
+// .video-container video {}
+
+.styleContainer {
+    background-color: #340458;
+    padding: 30px 30px 150px 30px;
+    border-radius: 10px;
+
+    h1 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 2.5em;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        color: #f6f3fa;
+    }
+
+    h2 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 2.5em;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        color: #fed636;
+    }
+
+
+    h3 {
+        padding-left: 25px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 2.5em;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        color: #340458;
+    }
+
+
+    .transcript-container {
+        background-color: #f6f3fa;
+        border-radius: 10px;
+        padding-left: 10px;
+
+        span {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1.0em;
+
+        }
+
+        li {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1.3em;
+            color: #444;
+            letter-spacing: 0.12em;
+            line-height: 1.75em;
+        }
+    }
+
+    video {
+        border-radius: 10px;
+    }
+}
 
 .control-bar {
-    width: 100%;
-    background-color: #340458;
+    width: 99%;
+    background-color: #f6f3fa;
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -80,7 +131,7 @@ h2 {
 .transcript-container {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 700px;
     overflow: auto;
 }
 
@@ -92,8 +143,9 @@ h2 {
 
 .timestamp {
     font-size: 1.3em;
-    background-color: #340458;
-    color: #fed636;
+    background-color: #14cac9;
+    color: #340458;
+    font-weight: bold;
     padding: 5px;
     border-radius: 10px;
     margin-right: 10px;
@@ -118,4 +170,20 @@ li {
 
 .div3 {
     grid-area: 1 / 3 / 3 / 4;
+}
+
+.transcript-list .active {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+
+nav {
+    color: #340458;
+
+    a {
+        text-decoration: none;
+    }
+
 }
