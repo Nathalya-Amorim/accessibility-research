@@ -1,27 +1,10 @@
-{{!--
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>
-    {{title}}
-  </title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel='stylesheet' href='/stylesheets/main.css' />
-</head>
-
-<body>
-  <h1>{{title}}</h1> --}}
+<section class="styleContainer">
+  <h1>{{title}}</h1>
   <section aria-label="Video player">
     <h2 class="div1">Dr. Binocs</h2>
     <div class="parent">
 
-      {{!-- <video id="video" class="video" controls height="640" src="">
-        <track label="English" kind="captions" srclang="en" src="/assets/Vincent.eng.vtt" default>
-      </video> --}}
+
       <div class="video-container div2">
         <video control id="binocs-video">
           <source src="/assets/binocs_volcano.mp4" type="video/mp4">
@@ -45,9 +28,9 @@
               class="fa-solid fa-expand"></i></button>
         </div>
       </div>
-      <div class="transcript-container div3">
-        <h2>Audio Transcript</h2>
-        <ul class="transcript-list">
+      <div class="transcript-container transcript-list div3">
+        <h3>Audio Transcript</h3>
+        <ul id="transcript-list">
           <li><span class="timestamp">0:09</span>Oh, hello friends!</li>
           <li><span class="timestamp">0:17</span>Are you wondering what this is?</li>
           <li><span class="timestamp">0:19</span>Well, it's the molten lava that comes out from a volcano</li>
@@ -96,10 +79,4 @@
       </div>
     </div>
   </section>
-  {{!--
-
-  <script src="/js/video-controller.js"></script>
-  <script src="https://kit.fontawesome.com/5cf9241734.js" crossorigin="anonymous"></script>
-</body>
-
-</html> --}}
+</section>
