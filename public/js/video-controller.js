@@ -1,4 +1,4 @@
-const video = document.getElementById('binocs-video');
+const media = document.getElementById('binocs-media');
 const rewindButton = document.getElementById('rewindButton');
 const playButton = document.getElementById('playButton');
 const pauseButton = document.getElementById('pauseButton');
@@ -8,32 +8,37 @@ const fullscreenButton = document.getElementById('fullscreenButton');
 const transcriptList = document.getElementById("transcript-list");
 
 playButton.addEventListener('click', function () {
-    video.play();
+    media.play();
 });
 
 pauseButton.addEventListener('click', function () {
-    video.pause();
+    media.pause();
 });
 
 volumeSlider.addEventListener('input', function () {
-    video.volume = volumeSlider.value;
+    media.volume = volumeSlider.value;
 });
 
 rewindButton.addEventListener('click', function () {
-    video.currentTime -= 5;
+    media.currentTime -= 5;
 });
 
 fastForwardButton.addEventListener('click', function () {
-    video.currentTime += 5;
+    media.currentTime += 5;
 });
 
-video.addEventListener("timeupdate", function () {
+media.addEventListener('timeupdate', function () {
+    seekbar.value = this.currentTime / this.duration;
+})
+
+media.addEventListener("timeupdate", function () {
     for (let i = 0; i < transcriptList.children.length; i++) {
         const span = transcriptList.children[i].querySelector("span");
         const startTime = convertToSeconds(span.textContent);
-        const endTime = i + 1 < transcriptList.children.length ? convertToSeconds(transcriptList.children[i + 1].querySelector("span").textContent) : video.duration;
-        if (video.currentTime >= startTime && video.currentTime < endTime) {
+        const endTime = i + 1 < transcriptList.children.length ? convertToSeconds(transcriptList.children[i + 1].querySelector("span").textContent) : media.duration;
+        if (media.currentTime >= startTime && media.currentTime < endTime) {
             transcriptList.children[i].classList.add("current");
+            transcriptList.children[i].scrollIntoView({ block: "start", behavior: "smooth" });
         } else {
             transcriptList.children[i].classList.remove("current");
         }
@@ -46,11 +51,11 @@ function convertToSeconds(timeString) {
 }
 
 fullscreenButton.addEventListener('click', function () {
-    if (video.requestFullscreen) {
-        video.requestFullscreen();
-    } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) {
-        video.msRequestFullscreen();
+    if (media.requestFullscreen) {
+        media.requestFullscreen();
+    } else if (media.webkitRequestFullscreen) {
+        media.webkitRequestFullscreen();
+    } else if (media.msRequestFullscreen) {
+        media.msRequestFullscreen();
     }
 });

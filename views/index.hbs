@@ -1,17 +1,18 @@
 <section class="styleContainer">
   <h1>{{title}}</h1>
   <section aria-label="Video player">
-    <h2 class="div1">Dr. Binocs</h2>
+    <h2 class="div1">Dr. Binocs Video</h2>
     <div class="parent">
-
-
       <div class="video-container div2">
-        <video control id="binocs-video">
+        <video control id="binocs-media">
           <source src="/assets/binocs_volcano.mp4" type="video/mp4">
           <p>Your browser does not support the video tag.</p>
           <track src="/assets/binocs_volcano.vtt" kind="captions" srclang="en" label="English captions" default>
-
         </video>
+
+        <div>
+          <progress id="seekbar" value="0" max="1"></progress>
+        </div>
 
         <div class="control-bar">
           <button id="rewindButton" class="btn btn-secondary" aria-label="Video Backward"><i
